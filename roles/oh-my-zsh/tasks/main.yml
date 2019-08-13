@@ -1,0 +1,19 @@
+- name: "Download Oh-My-Zsh install script"
+  get_url:
+    dest: "{{ oh_my_zsh_script_path }}"
+    url: "{{ oh_my_zsh_url }}"
+    mode: u+rwx
+
+      
+- name: "Execute Oh-My-Zsh install script"
+  ignore_errors: True
+  shell: "{{ oh_my_zsh_script_path }} --unattended"
+  register: oh_my_zsh_info
+
+- name: "Oh-My-Zsh execute debug info"  
+  debug:
+    var:  oh_my_zsh_info
+
+# - name: "Set zsh default"
+#   become: yes
+#   command: "chsh -s /bin/zsh {{ USER }}"

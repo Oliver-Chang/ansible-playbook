@@ -1,0 +1,8 @@
+pip_config_dir: "$HOME/.pip"
+
+pip_packages:
+  - pipenv
+  - httpie
+  - tldr
+  - docker-compose
+

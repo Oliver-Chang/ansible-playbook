@@ -1,0 +1,4 @@
+# Base package Install
+- name: "Base package setup"
+  include_tasks: "{{ ansible_distribution }}.yml"
+

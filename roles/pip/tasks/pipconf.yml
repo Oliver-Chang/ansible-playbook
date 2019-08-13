@@ -1,0 +1,9 @@
+- name: "Will create director {{ pip_config_dir }} "
+  file:
+    path: "{{ pip_config_dir }}"
+    state: directory
+
+- name: "Will copy pip config file to remote"
+  copy:
+    src: "douban.conf"
+    dest: "{{ pip_config_dir }}/pip.conf"

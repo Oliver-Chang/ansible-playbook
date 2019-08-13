@@ -1,0 +1,3 @@
+# Spacevim dependency role common
+dependencies:
+  - role: common

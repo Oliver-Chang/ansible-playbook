@@ -1,0 +1,5 @@
+# 使用 include_tasks 可以使用变量
+- name: "Will install distribution related packages."
+  include_tasks: "{{ item }}.yml"
+  with_items: " {{ group_names }} "
+  

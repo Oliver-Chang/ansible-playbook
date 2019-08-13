@@ -1,0 +1,5 @@
+- name: "Set profile enviroment variable term"
+  lineinfile:
+   path: "{{ user_profile }}"
+   line: "export TERM=xterm-color"
+   create: yes

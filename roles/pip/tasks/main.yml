@@ -1,0 +1,5 @@
+- name: "setting pip config file"
+  import_tasks: "pipconf.yml"
+
+- name: "python package install"
+  import_tasks: "packages.yml"

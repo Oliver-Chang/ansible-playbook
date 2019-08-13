@@ -1,0 +1,2 @@
+oh_my_zsh_url: "https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh"
+oh_my_zsh_script_path: "{{ DOWNLOAD_DIR }}/oh_my_zsh_install.sh"

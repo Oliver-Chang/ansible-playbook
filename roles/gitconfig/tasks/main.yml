@@ -1,0 +1,4 @@
+- name: "Will copy gitconfig file"
+  copy:
+    src: "gitconfig"
+    dest: "$HOME/.gitconfig"

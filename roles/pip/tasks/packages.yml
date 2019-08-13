@@ -1,0 +1,9 @@
+- name: "Will install Python Packages: {{ pip_packages }}."
+  # register: pip_install_result
+  pip:
+    name: "{{ pip_packages }}"
+    extra_args: --user
+    executable: "pip3"
+    
+# - debug:
+#     var: pip_install_result

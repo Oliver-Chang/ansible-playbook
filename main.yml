@@ -1,0 +1,7 @@
+- name: "System basic enviroment setup!"
+  #  gather_facts: false
+  hosts: desktop
+  remote_user: "root"
+  roles:
+    - base
+    - user

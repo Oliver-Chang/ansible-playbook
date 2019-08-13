@@ -1,0 +1,50 @@
+common_packages:
+  - zsh
+  - git
+  - vim
+  - neovim
+  - clang
+  - docker
+  - cmake
+  - gcc
+  - ctags
+  - cscope
+  
+ubuntu_packages:
+  - python3-pip
+  - golang
+  - openssl
+  - python3-dev
+  - lua5.3
+  - default-jdk
+
+centos_packages:
+  - epel-release
+  - python36
+  - python36-pip
+  - python36-devel
+  - openssl-devel 
+  - golang
+  - lua
+  - java-latest-openjdk
+
+archlinux_packages:
+  - base-devel
+  - yay
+  - python3
+  - python-pip
+  - go
+  - nodejs
+  - lua
+  - jdk-openjdk
+
+aur_packages:
+  - typora
+  - dropbox
+  - google-chrome
+  - visual-studio-code-bin
+  - jdk
+  - jdk9
+  - intellij-idea-ultimate-edition
+  - pycharm-professional
+  - clion

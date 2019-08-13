@@ -1,0 +1,4 @@
+fcitx_packages:
+  - fcitx-im
+  - fcitx-configtool
+  - fcitx-googlepinyin

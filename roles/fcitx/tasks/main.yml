@@ -1,0 +1,5 @@
+- name: "Will install fcitx packages: {{fcitx_packages}}."
+  package:
+    name: "{{ fcitx_packages }}"
+    state: latest
+    when: "{{ ansible_distribution }} == Archlinux "

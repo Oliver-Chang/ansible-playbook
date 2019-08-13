@@ -1,0 +1,19 @@
+# [http "https://github.com"]
+# 	proxy = socks5://127.0.0.1:1080
+# [https "https://github.com"]
+# 	proxy = socks5://127.0.0.1:1080
+# [git "git://git.kernel"]
+# 	proxy = socks5://127.0.0.1:1080
+# [https "https://git.kernel"]
+# 	proxy = socks5://127.0.0.1:1080
+# [http "https://git.kernel"]
+# 	proxy = socks5://127.0.0.1:1080
+# [http "http://golang.org"]
+# 	proxy = socks5://127.0.0.1:1080
+# [https "http://golang.org"]
+# 	proxy = socks5://127.0.0.1:1080
+# [https "http://go.uber.org"]
+# 	proxy = socks5://127.0.0.1:1080
+[user]
+	name = Oliver-Chang
+	email = oliverchangnt@gmail.com

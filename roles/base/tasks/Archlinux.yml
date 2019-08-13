@@ -1,0 +1,13 @@
+- name: "Setting repositories mirro"
+  shell: "pacman-mirrors -c China -m rank"
+  
+- name: "Upgrade whole System"
+  pacman: 
+    upgrade: yes
+    
+- name: "Install package {{ archlinux_packages }}."
+  pacman:
+    state: latest 
+    name: "{{ archlinux_packages }}"
+    update_cache: yes
+

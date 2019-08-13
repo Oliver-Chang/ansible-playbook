@@ -1,0 +1,13 @@
+[Unit]
+Description=Shadowsocks-Go Client Service
+After=network-online.target
+
+[Service]
+Type=simple
+User=root
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+ExecStart=/root/go/bin/shadowsocks-local -c /etc/shadowsocks/%i.json
+
+[Install]
+WantedBy=multi-user.target
+

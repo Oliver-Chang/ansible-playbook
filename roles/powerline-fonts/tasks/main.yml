@@ -1,0 +1,7 @@
+- name: "Will clone powerline fonts repo"
+  git:
+    repo: "{{ powerline_fonts_repo }}"
+    dest: "{{ clone_dest }}"
+
+- name: "Will install powerline fonts"
+  shell: "{{ clone_dest }}/install.sh"

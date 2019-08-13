@@ -1,0 +1,15 @@
+# AUR package install!
+- name: "Will install AUR packages: {{aur_packages}}. "
+  become: no
+  ignore_errors: True
+  aur:
+    skip_installed: yes
+    use: yay
+    name: "{{ aur_packages }}"
+  register: aur_install_info
+  when: "{{ ansible_distribution }} is Archlinux"
+
+- name: "AUR Package debug info"
+  debug:
+    var: aur_install_info # not required. A variable name to debug.  Mutually exclusive with the 'msg' option.
+

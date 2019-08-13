@@ -1,0 +1,12 @@
+- name: "include user variable"
+  include_vars:
+    file:  "{{ ansible_distribution }}.yml"
+    name: user_variable
+    
+- name: "Create user"
+  import_tasks: user.yml
+  
+- name: "Config User"
+  become: yes
+  become_user: "{{ USER }}"
+  import_tasks: configure.yml

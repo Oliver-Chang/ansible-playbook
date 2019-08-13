@@ -1,0 +1,13 @@
+[Unit]
+Description=Cow for http socket proxy
+After=network-online.target
+
+[Service]
+Type=simple
+User=oliver
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+ExecStart=/root/go/bin/cow
+
+[Install]
+WantedBy=multi-user.target
+

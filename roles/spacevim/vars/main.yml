@@ -1,0 +1,5 @@
+pip_packages:
+  - neovim
+
+spacevim_script_url: "https://spacevim.org/cn/install.sh"
+spacevim_script_path: "{{ DOWNLOAD_DIR }}/spacevim_install.sh"

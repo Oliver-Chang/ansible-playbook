@@ -10,7 +10,3 @@ USER=oliver
 localhost ansible_connection=local ansible_sudo_pass='linux'
 
 [server]
-119.23.25.140
-
-[router]
-192.168.50.1

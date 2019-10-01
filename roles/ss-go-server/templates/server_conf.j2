@@ -1,0 +1,14 @@
+{
+	"port_password": {
+        {% for port in range(10000, port_quantity) %}
+        "{{ port }}": "{{ ss_password }}",
+        {% endfor %}
+
+        {% for port in range(20000, port_quantity) %}
+        "{{ port }}": "{{ ss_password }}",
+        {% endfor %}
+		"9999": "{{ ss_password }}"
+	},
+	"method": "{{ encrypt_method }}",
+	"timeout": {{timeout}}
+}

@@ -1,0 +1,10 @@
+- name: Include OS-specific variables.
+  include_vars: '{{ ansible_distribution }}.yaml'
+
+- name: "Base package setup"
+  include_tasks: "{{ ansible_distribution }}.yaml"
+
+# - name: "Install package {{ packages }}."
+#   package:
+#     state: latest
+#     name: "{{ packages }}"

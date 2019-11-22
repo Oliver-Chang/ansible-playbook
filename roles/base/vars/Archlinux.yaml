@@ -1,0 +1,25 @@
+packages:
+  - base-devel
+  # tools
+  - yay
+  - zsh
+  - git
+  - vim
+  - neovim
+  - docker
+  - termite
+  # c&cpp 
+  - clang
+  - lldb
+  - make
+  - cmake
+  - gcc
+  # python 
+  - python3
+  - python-pip
+  # golang
+  - go
+  # nodejs
+  - nodejs
+  # java
+  - jdk11-openjdk

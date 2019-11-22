@@ -7,6 +7,6 @@ Type=simple
 User=root
 CapabilityBoundingSet=CAP_NET_BIND_SERVICE
 ExecStart=/root/go/bin/shadowsocks-server -c /etc/shadowsocks/server.json
-
+StandardOutput=file:/var/log/ss-go-server/stdout.log
 [Install]
 WantedBy=multi-user.target

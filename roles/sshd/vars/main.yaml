@@ -1,0 +1,7 @@
+sshd_conf:
+    # 禁止密码登录
+  - PasswordAuthentication no
+    # 保持长连接连接，每 60 秒发生一次消息
+  - ClientAliveInterval 60
+    # 最大未响应次数
+  - ClientAliveCountMax 3

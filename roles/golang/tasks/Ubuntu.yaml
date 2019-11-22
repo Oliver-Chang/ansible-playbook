@@ -1,0 +1,14 @@
+- name: "Ubuntu ppa support"
+  apt:
+    name: "software-properties-common"
+    state: latest
+
+- name: "Add goalng ppa"
+  apt_repository:
+    repo: ppa:longsleep/golang-backports
+
+- name: Update repositories cache and install Golang package
+  apt:
+    name: golang-go
+    update_cache: yes
+    state: latest

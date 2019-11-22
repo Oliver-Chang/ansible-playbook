@@ -1,0 +1,7 @@
+- name: "Install Golang develop enviroment"
+  include_tasks: "{{ ansible_distribution }}.yml"
+
+- name: "Will copy go enviroment file"
+  copy:
+    src: "go_env.sh"
+    dest: "/etc/profile.d/go_env.sh"

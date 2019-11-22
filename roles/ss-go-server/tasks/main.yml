@@ -1,23 +1,23 @@
-# - name: "Will install shadowsocks-go-server"
-#   shell: "go get github.com/shadowsocks/shadowsocks-go/cmd/shadowsocks-server"
+- name: "Will install shadowsocks-go-server"
+  shell: "go get github.com/shadowsocks/shadowsocks-go/cmd/shadowsocks-server"
 
-# - name: "Add shadowsocks-go-server service"
-#   copy:
-#       dest: "{{ ss_go_server_dest }}"
-#       src:  shadowsocks-go-server.service
+- name: "Add shadowsocks-go-server service"
+  copy:
+      dest: "{{ ss_go_server_dest }}"
+      src:  shadowsocks-go-server.service
 
-# - name: "Create shadowsocks-go-server config directory"
-#   file:
-#     path: "/etc/shadowsocks"
-#     state: directory
+- name: "Create shadowsocks-go-server config directory"
+  file:
+    path: "/etc/shadowsocks"
+    state: directory
 
-- name: "Create shadowsocks-go-server config file"
-  template:
-    dest: "/etc/shadowsocks/server.json.test"
-    src: server_conf.j2
+# - name: "Create shadowsocks-go-server config file"
+#   template:
+#     dest: "/etc/shadowsocks/server.json.test"
+#     src: server_conf.j2
 
-# - name: "Enable and start shadowsocks-go-server service"
-#   systemd:
-#     name: "shadowsocks-go-server.service"
-#     enabled: "yes"
-#     state: "started"
+- name: "Enable and start shadowsocks-go-server service"
+  systemd:
+    name: "shadowsocks-go-server.service"
+    enabled: "yes"
+    state: "started"

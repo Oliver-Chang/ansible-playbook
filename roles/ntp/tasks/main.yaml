@@ -1,0 +1,23 @@
+# Configure NTP and Timezone
+
+- name: Include OS-specific variables.
+  include_vars: '{{ ansible_distribution }}.yaml'
+
+- name: Ensure NTP-related packages are installed.
+  package:
+    name: ntp
+    state: present
+
+- name: Setting NTP Server Config
+  lineinfile:
+    path: /etc/ntp.conf
+    line: '{{ item }}'
+    create: yes
+  with_items: 
+    - '{{ ntp_server }}'
+
+- name: Start service NTP, if not started. And enable service
+  service:
+    name: '{{ ntp_daemon }}'
+    state: restarted
+    enabled: yes

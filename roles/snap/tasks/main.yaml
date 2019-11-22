@@ -1,0 +1,2 @@
+- name: "Include Distribution task"
+  include_tasks: "{{ ansible_distribution }}.yaml"

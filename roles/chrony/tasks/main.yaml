@@ -1,0 +1,18 @@
+# 时间同步工具
+- name: Install chrony package
+  package:
+    name: chrony
+
+- name: Setting NTP Server Config
+  lineinfile:
+    path: /etc/chrony.conf
+    line: '{{ item }}'
+    create: yes
+  with_items: 
+    - '{{ ntp_server }}'
+
+- name: Chrony service enabled and start
+  service:
+      name: chronyd
+      enabled: yes 
+      state: restarted

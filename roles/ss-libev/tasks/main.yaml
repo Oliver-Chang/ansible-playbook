@@ -1,0 +1,20 @@
+- name: Install shadowsocks-libev
+  package:
+    state: latest 
+    name: shadowsocks-libev
+
+- name: Copy shadowsocks-libev ss-manager service file
+  copy:
+    dest: /etc/systemd/system/shadowsocks-libev-manager@.service
+    src: shadowsocks-libev-manager@.service
+
+- name: Copy shadowsocks-libev ss-manager service file
+  copy:
+    dest: /etc/shadowsocks-libev/config.json
+    src: config.json
+
+- name: Start And Enable ss-manager service
+  service:
+    name: shadowsocks-libev-manager@config.service
+    enabled: yes
+    state: restarted

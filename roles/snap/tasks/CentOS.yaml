@@ -1,0 +1,10 @@
+- name: Install snap
+  package:
+    state: latest
+    name: sanpd
+
+- name: start and enable snapd server
+  service:
+    name: snapd.socket
+    enabled: yes
+    state: restarted

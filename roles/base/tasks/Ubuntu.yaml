@@ -1,0 +1,19 @@
+- name: Include OS-specific variables.
+  include_vars: '{{ ansible_distribution }}.yaml'
+
+- name: "Update all packages to the latest version"
+  apt:
+    upgrade: dist
+    
+    
+- name: "Install Ubuntu package {{ packages }}"
+  apt:
+    name: "{{ packages }}"
+    state: latest
+    update_cache: yes
+
+- name: "Remove dependencies that are no longer required"
+  apt:
+    autoremove: yes
+
+

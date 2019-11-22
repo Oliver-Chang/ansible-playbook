@@ -1,0 +1,15 @@
+# centos_packages:
+#   - epel-release
+#   - python36
+#   - python36-pip
+#   - python36-devel
+#   - openssl-devel 
+#   - golang
+#   - lua
+#   - java-latest-openjdk
+
+packages:
+  - epel-release
+  - git
+  - vim
+  # - neovim

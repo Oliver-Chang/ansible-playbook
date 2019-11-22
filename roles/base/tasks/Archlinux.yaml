@@ -1,3 +1,6 @@
+- name: Include OS-specific variables.
+  include_vars: '{{ ansible_distribution }}.yaml'
+
 - name: "Setting repositories mirro"
   shell: "pacman-mirrors -c China -m rank"
   
@@ -5,9 +8,9 @@
   pacman: 
     upgrade: yes
     
-- name: "Install package {{ archlinux_packages }}."
+- name: "Install package {{ packages }}."
   pacman:
     state: latest 
-    name: "{{ archlinux_packages }}"
+    name: "{{ packages }}"
     update_cache: yes
 

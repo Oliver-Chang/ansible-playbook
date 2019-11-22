@@ -1,0 +1,12 @@
+- name: "Server Init!"
+  # gather_facts: false
+  hosts: server
+  remote_user: "root"
+  roles:
+    # - base
+    # - timezone
+    # - chrony
+    # - sshd
+    - ss-libev
+    # - user
+    # - ss-go-server

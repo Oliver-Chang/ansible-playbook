@@ -3,13 +3,25 @@
 
 - name: "Add shadowsocks-go-server service"
   copy:
-      dest: "{{ ss_go_server_dest }}"
+      dest: /etc/systemd/system/shadowsocks-go-server.service
       src:  shadowsocks-go-server.service
 
 - name: "Create shadowsocks-go-server config directory"
   file:
     path: "/etc/shadowsocks"
     state: directory
+
+- name: "Create shadowsocks-go-server log directory"
+  file:
+    path: /var/log/ss-go-server
+    state: directory
+    recurse: yes
+
+- name: copy syshadowsocks-servermbolic to /usr/local/bin
+  copy:
+    src: /root/go/bin/shadowsocks-server
+    dest: /usr/local/bin/shadowsocks-server
+    remote_src: yes
 
 # - name: "Create shadowsocks-go-server config file"
 #   template:
@@ -20,4 +32,15 @@
   systemd:
     name: "shadowsocks-go-server.service"
     enabled: "yes"
-    state: "started"
+    state: "restarted"
+
+- name: "Add shadowsocks-go-server firewalld service"
+  copy:
+    dest: /etc/firewalld/services/ss-go-server.xml
+    src:  ss-go-server.xml
+
+- name: "firewalld setting"
+  firewalld:
+    service: ss-go-server
+    permanent: yes
+    state: enabled

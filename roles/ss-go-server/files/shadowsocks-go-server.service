@@ -1,12 +1,16 @@
 [Unit]
 Description=Shadowsocks-Go Server Service
+# After=network.target
 After=network-online.target
+
 
 [Service]
 Type=simple
-User=root
+User=nobody
+Group=nobody
 CapabilityBoundingSet=CAP_NET_BIND_SERVICE
-ExecStart=/root/go/bin/shadowsocks-server -c /etc/shadowsocks/server.json
-StandardOutput=file:/var/log/ss-go-server/stdout.log
+ExecStart=/usr/local/bin/shadowsocks-server -c /etc/shadowsocks/server.json
+StandardOutput=append:/var/log/ss-go-server/stdout.log
+
 [Install]
 WantedBy=multi-user.target

@@ -9,6 +9,4 @@
 
 - name: Update repositories cache and install Golang package
   apt:
-    name: golang-go
     update_cache: yes
-    state: latest

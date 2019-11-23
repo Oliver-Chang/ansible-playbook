@@ -1,4 +1,3 @@
-ss_go_server_dest: "/etc/systemd/system/shadowsocks-go-server.service"
 
 port_quantity: 9
 ss_password: ""

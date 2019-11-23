@@ -4,7 +4,7 @@ common_packages:
   - vim
   - neovim
   - clang
-  - docker
+  # - docker
   - cmake
   - gcc
   - ctags

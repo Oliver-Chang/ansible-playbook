@@ -21,3 +21,7 @@ $ ansible-playbook main.yml -i inventory
 $ git clone https://github.com/kewlfft/ansible-aur.git ~/.ansible/plugins/modules/aur
 ```
 
+
+# 参考
+
+(https://note.so1234.top/)[https://note.so1234.top/]

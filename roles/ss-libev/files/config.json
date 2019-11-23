@@ -1,7 +1,0 @@
-{
-	"port_password": {
-		"10000": "linux10000"
-	},
-	"method": "aes-256-cfb",
-	"timeout": 600
-}

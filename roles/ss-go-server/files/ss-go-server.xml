@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>ss-go-server</short>
+  <description> ss-go-server port </description>
+  <port protocol="tcp" port="10000-10009"/>
+  <port protocol="udp" port="10000-10009"/>
+  <port protocol="tcp" port="20000-20009"/>
+  <port protocol="udp" port="20000-20009"/>
+</service>

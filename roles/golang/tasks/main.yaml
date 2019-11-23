@@ -1,7 +1,15 @@
-- name: "Install Golang develop enviroment"
-  include_tasks: "{{ ansible_distribution }}.yml"
+- name: Install Prepare Operation with distribution
+  include_tasks: "{{ ansible_distribution }}.yaml"
+
+- name: Include distribution variable
+  include_vars: "{{ ansible_distribution }}.yaml"
 
 - name: "Will copy go enviroment file"
   copy:
     src: "go_env.sh"
     dest: "/etc/profile.d/go_env.sh"
+
+- name: Install golang package
+  package:
+    name: "{{ golang_package }}"
+    state: latest

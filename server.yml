@@ -3,9 +3,10 @@
   hosts: server
   remote_user: "root"
   roles:
-    # - base
-    # - golang
-    # - timezone
-    # - chrony
-    # - sshd
-    - ss-go-server
+    - role: oefenweb.swapfile
+      swapfile_size: 8GB
+    - base
+    - golang
+    - timezone
+    - chrony
+    - sshd

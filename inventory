@@ -8,6 +8,11 @@ USER=oliver
 
 [desktop]
 localhost ansible_connection=local ansible_sudo_pass='linux'
+45.32.137.2
 
 [server]
-45.32.137.2
+aliyun.oliverch.com
+
+[k8s]
+bdy1.oliverch.com
+bdy2.oliverch.com

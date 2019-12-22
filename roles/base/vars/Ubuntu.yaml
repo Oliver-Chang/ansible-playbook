@@ -2,6 +2,7 @@ packages:
   - git
   - vim
   - neovim
+  - snapd
   # - zsh
   # - openssl  
   # tools 

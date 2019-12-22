@@ -1,11 +1,13 @@
 [Unit]
-Description=Cow for http socket proxy
-After=network-online.target
+Description=Meow for http socket proxy
+After=network.target
 
 [Service]
 Type=simple
 User=root
-CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+Group=root
+Restart=always
+RuntimeMaxSec=28800
 ExecStart=/root/go/bin/MEOW
 
 [Install]

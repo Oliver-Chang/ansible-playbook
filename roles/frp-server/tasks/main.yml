@@ -3,44 +3,41 @@
     url: https://github.com/fatedier/frp/releases/download/v0.31.0/frp_0.31.0_linux_amd64.tar.gz
     dest: $HOME/frp_0.31.0_linux_amd64.tar.gz
 
-- name: Will create $HOME/frp directory
-  become: yes
+- name: Will create $HOME/.local/frp directory
   file:
     state: directory
-    path: $HOME/frp
+    path: $HOME/.local/frp
 
 - name: uncompress frp archive
   unarchive:
     src: $HOME/frp_0.31.0_linux_amd64.tar.gz
     remote_src: yes
-    dest: $HOME/frp
+    dest: $HOME/.local/frp
 
 - name: create frp server binary link to /usr/bin/
   file:
-    src: $HOME/frp/frps
+    src: $HOME/.local/frp/frps
     dest: /usr/bin/frps
     state: link
 
 - name: Will create /etc/frp directory
-  become: yes
   file:
     state: directory
     path: /etc/frp
 
 - name: copy frps.ini to /etc/frp/frps.ini
   copy:
-    src: $HOME/frp/fprs.ini
+    src: $HOME/.local/frp/fprs.ini
     remote_src: yes
     dest: /etc/frp/frps.ini
 
 - name: copy frps.server to /etc/systemd/system/frps.service
   copy:
-    src: $HOME/frp/systemd/frps.service
+    src: $HOME/.local/frp/systemd/frps.service
     remote_src: yes
     dest: /etc/systemd/system/frps.service
 
 - name: Enable and start frps.service
-  become: yes
   systemd:
     name: frps
     enabled: yes

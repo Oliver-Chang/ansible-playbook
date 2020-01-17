@@ -4,14 +4,11 @@
     dest: "{{ spacevim_script_path }}"
     mode: u+rwx
 
-- name: "Install Spacevim Python dependency"    
-  import_tasks: "pip.yml"
-
 - name: "Execute Spacevim install script"
-  shell: "{{ spacevim_script_path }} --install neovim" 
+  async: 45
+  poll: 5
+  shell: "{{ spacevim_script_path }} --install neovim"
   register: spacevim_install_result
-  notify:
-    - Init Spacevim
 
 - debug:
     var: spacevim_install_result.stdout_lines

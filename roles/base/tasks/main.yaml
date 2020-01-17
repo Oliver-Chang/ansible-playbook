@@ -4,7 +4,8 @@
 - name: "Base package setup"
   include_tasks: "{{ ansible_distribution }}.yaml"
 
-# - name: "Install package {{ packages }}."
-#   package:
-#     state: latest
-#     name: "{{ packages }}"
+- name: "Install package {{ packages }}."
+  become: yes
+  package:
+    state: latest
+    name: "{{ packages }}"

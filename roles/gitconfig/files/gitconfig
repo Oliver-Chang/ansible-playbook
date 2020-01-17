@@ -1,7 +1,7 @@
-# [http "https://github.com"]
-# 	proxy = socks5://127.0.0.1:1080
-# [https "https://github.com"]
-# 	proxy = socks5://127.0.0.1:1080
+#[http "https://github.com"]
+#	proxy = http://127.0.0.1:7777
+#[https "https://github.com"]
+#	proxy = http://127.0.0.1:7777
 # [git "git://git.kernel"]
 # 	proxy = socks5://127.0.0.1:1080
 # [https "https://git.kernel"]

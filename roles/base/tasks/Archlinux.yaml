@@ -1,16 +1,17 @@
-- name: Include OS-specific variables.
-  include_vars: '{{ ansible_distribution }}.yaml'
-
-- name: "Setting repositories mirro"
-  shell: "pacman-mirrors -c China -m rank"
-  
-- name: "Upgrade whole System"
-  pacman: 
-    upgrade: yes
+# - name: Include OS-specific variables.
+#   include_vars: '{{ ansible_distribution }}.yaml'
+# 
+# - name: "Setting repositories mirro"
+#   become: yes
+#   shell: "pacman-mirrors -c China -m rank"
+#   
+# - name: "Upgrade whole System"
+#   become: yes
+#   pacman: 
+#     upgrade: yes
     
-- name: "Install package {{ packages }}."
-  pacman:
-    state: latest 
-    name: "{{ packages }}"
-    update_cache: yes
-
+    #- name: "Install package {{ packages }}."
+    #  become: yes
+    #  package:
+    #    name: "{{ packages }}"
+    #    update_cache: yes

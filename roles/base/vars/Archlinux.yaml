@@ -1,25 +1,24 @@
 packages:
   - base-devel
-  # tools
   - yay
   - zsh
   - git
   - vim
   - neovim
-  # - docker
   - termite
-  # c&cpp 
-  - clang
-  - lldb
   - make
   - cmake
-  - gcc
-  # python 
-  - python3
+  - clang
+  - lldb
   - python-pip
-  # golang
-  - go
-  # nodejs
-  - nodejs
-  # java
-  - jdk11-openjdk
+  - albert
+    #  - nodejs
+# - docker
+# c&cpp
+#- gcc
+# python
+# nodejs
+# java
+# - jdk11-openjdk
+
+#- python3 will error

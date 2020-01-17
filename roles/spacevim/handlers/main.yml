@@ -1,2 +1,4 @@
 - name: Init Spacevim
+  async: 45
+  poll: 5
   shell: "nvim --headless +'call dein#install()' +qall"

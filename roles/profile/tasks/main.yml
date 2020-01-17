@@ -1,5 +1,9 @@
-- name: "Set profile enviroment variable term"
-  lineinfile:
-   path: "{{ user_profile }}"
-   line: "export TERM=xterm-color"
-   create: yes
+- name: "Set user profile"
+  copy:
+    dest: "$HOME/.profile"
+    src: "profile"
+
+- name: "Set user editorconfig"
+  copy:
+    dest: "$HOME/.editorconfig"
+    src: "editorconfig"

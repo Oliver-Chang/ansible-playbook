@@ -1,10 +1,10 @@
-- name: upgrade all packages
-  dnf:
-    name: "*"
-    state: latest
-    update_cache: yes
-
-- name: 'Install base packages: {{ packages }} '
-  dnf:
-    name: '{{ packages }}'
-    update_cache: yes
+# - name: upgrade all packages
+#   dnf:
+#     name: "*"
+#     state: latest
+#     update_cache: yes
+# 
+# - name: 'Install base packages: {{ packages }} '
+#   dnf:
+#     name: '{{ packages }}'
+#     update_cache: yes

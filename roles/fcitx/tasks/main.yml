@@ -1,5 +1,4 @@
 - name: "Will install fcitx packages: {{fcitx_packages}}."
-  package:
+  become: yes
+  pacman:
     name: "{{ fcitx_packages }}"
-    state: latest
-    when: "{{ ansible_distribution }} == Archlinux "

@@ -1,0 +1,30 @@
+- name: "Will install meow"
+  become: yes
+  shell: "go get github.com/netheril96/MEOW"
+
+- name: "Will copy meow.service to remote"
+  become: yes
+  copy:
+    src: "meow.service"
+    dest: "/etc/systemd/system/meow.service"
+
+- name: "Will create /root/.meow directory"
+  become: yes
+  file:
+    state: directory
+    path: "/root/.meow"
+
+- name: "Will copy meow rc config file to remote"
+  become: yes
+  copy:
+    src: "rc"
+    dest: "/root/.meow/rc"
+
+- name: "Enable and start meow.service"
+  become: yes
+  systemd:
+    name: "meow"
+    enabled: yes
+    state: restarted
+    daemon_reload: yes
+

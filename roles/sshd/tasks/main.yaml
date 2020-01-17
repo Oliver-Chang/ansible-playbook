@@ -1,6 +1,7 @@
 # Configure SSH server service
 
 - name: Setting sshd Server Config
+  become: yes
   lineinfile:
     path: /etc/ssh/sshd_config
     line: '{{ item }}'
@@ -9,6 +10,7 @@
     - '{{ sshd_conf }}'
 
 - name: Start service sshd, if not started. And enable service
+  become: yes
   service:
     name: sshd
     state: restarted

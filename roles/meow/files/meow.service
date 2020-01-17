@@ -1,0 +1,15 @@
+[Unit]
+Description=Meow for http socket proxy
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+Restart=always
+RuntimeMaxSec=28800
+ExecStart=/root/go/bin/MEOW
+
+[Install]
+WantedBy=multi-user.target
+

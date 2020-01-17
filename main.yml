@@ -1,7 +1,19 @@
 - name: "System basic enviroment setup!"
   #  gather_facts: false
   hosts: desktop
-  remote_user: "root"
+  remote_user: "oliver"
   roles:
     - base
-    - user
+    - pip
+    - gitconfig
+    - golang
+    - sshd
+    - timezone
+    - chrony
+    - fcitx
+    - profile
+    - i3wm-desktop
+    - alacritty
+    - meow
+    - powerline-fonts
+    #- spacevim

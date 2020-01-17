@@ -2,13 +2,15 @@
 DOWNLOAD_DIR=$HOME/Downloads
 USER_PROFILE=$HOME/.profile
 USER=oliver
+ssh_args= -C -o ControlMaster=auto -o ControlPersist=5d
+pipelining = True
 
 [mi]
 192.168.50.200 
 
 [desktop]
-localhost ansible_connection=local ansible_sudo_pass='linux'
-45.32.137.2
+# 192.168.50.216 ansible_connection=local ansible_sudo_pass='linux'
+192.168.50.216 ansible_sudo_pass='linux'
 
 [server]
 aliyun.oliverch.com
@@ -16,3 +18,6 @@ aliyun.oliverch.com
 [k8s]
 bdy1.oliverch.com
 bdy2.oliverch.com
+
+[vultr]
+45.32.137.2

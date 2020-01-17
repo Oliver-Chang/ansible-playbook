@@ -5,11 +5,14 @@
   include_vars: "{{ ansible_distribution }}.yaml"
 
 - name: "Will copy go enviroment file"
+  become: yes
   copy:
     src: "go_env.sh"
     dest: "/etc/profile.d/go_env.sh"
+    mode: '0755'
 
 - name: Install golang package
+  become: yes
   package:
     name: "{{ golang_package }}"
     state: latest

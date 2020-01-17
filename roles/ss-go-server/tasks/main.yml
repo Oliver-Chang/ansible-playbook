@@ -3,8 +3,8 @@
 
 - name: "Add shadowsocks-go-server service"
   copy:
-      dest: /etc/systemd/system/shadowsocks-go-server.service
-      src:  shadowsocks-go-server.service
+    dest: /etc/systemd/system/shadowsocks-go-server.service
+    src:  shadowsocks-go-server.service
 
 - name: "Create shadowsocks-go-server config directory"
   file:

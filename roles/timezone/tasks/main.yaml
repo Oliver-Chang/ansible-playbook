@@ -1,4 +1,5 @@
 - name: Timezone Setting Asia/Shanghai
+  become: yes
   timezone:
     hwclock: UTC
     name: Asia/Shanghai

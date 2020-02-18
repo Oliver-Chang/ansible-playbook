@@ -6,7 +6,7 @@ ssh_args= -C -o ControlMaster=auto -o ControlPersist=5d
 pipelining = True
 
 [mi]
-192.168.50.200 
+192.168.50.200
 
 [desktop]
 # 192.168.50.216 ansible_connection=local ansible_sudo_pass='linux'
@@ -15,9 +15,9 @@ pipelining = True
 [server]
 aliyun.oliverch.com
 
-[k8s]
+[bdy]
 bdy1.oliverch.com
 bdy2.oliverch.com
 
 [vultr]
-45.32.137.2
+149.28.213.122

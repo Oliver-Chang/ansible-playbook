@@ -3,11 +3,11 @@
   hosts: vultr
   remote_user: "root"
   roles:
-    - role: oefenweb.swapfile
-      swapfile_size: 4GB
+    #    - role: oefenweb.swapfile
+    #      swapfile_size: 4GB
     - base
     - golang
     - timezone
     - chrony
     - sshd
-    - ss-go-server
+    - role: ss-go-server

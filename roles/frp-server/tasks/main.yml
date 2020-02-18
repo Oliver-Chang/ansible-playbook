@@ -13,6 +13,7 @@
     src: $HOME/frp_0.31.0_linux_amd64.tar.gz
     remote_src: yes
     dest: $HOME/.local/frp
+    extra_opts: [--strip-components=1]
 
 - name: create frp server binary link to /usr/bin/
   file:
@@ -27,7 +28,7 @@
 
 - name: copy frps.ini to /etc/frp/frps.ini
   copy:
-    src: $HOME/.local/frp/fprs.ini
+    src: $HOME/.local/frp/frps.ini
     remote_src: yes
     dest: /etc/frp/frps.ini
 

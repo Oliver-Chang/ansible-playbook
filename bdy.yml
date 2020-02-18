@@ -1,0 +1,13 @@
+- name: "bdy server"
+  # gather_facts: false
+  hosts: bdy
+  remote_user: "root"
+  roles:
+    #    - role: oefenweb.swapfile
+    #      swapfile_size: 8GB
+    - role: user
+      users:
+        - oliver
+          #- timezone
+          #- sshd
+          #- chrony

@@ -1,12 +1,20 @@
-- name: "include user variable"
-  include_vars:
-    file:  "{{ ansible_distribution }}.yml"
-    name: user_variable
-    
-- name: "Create user"
-  import_tasks: user.yml
-  
-- name: "Config User"
-  become: yes
-  become_user: "{{ USER }}"
-  import_tasks: configure.yml
+#- name: Install fish
+#  become: yes
+#  package:
+#    state: latest
+#    name: fish
+
+- name: Create user "{{ USER }}"
+  user:
+    name: "{{ item }}"
+    shell: /bin/bash
+  with_items:
+    - "{{ users }}"
+
+
+- name: "Set authorized key taken from file"
+  authorized_key:
+    user: "{{ USER }}"
+    state: present
+    key: "{{ lookup('file', lookup('env','HOME') + '/.ssh/id_rsa.pub') }}"
+

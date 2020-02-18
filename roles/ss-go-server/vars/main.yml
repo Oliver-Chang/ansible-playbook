@@ -1,5 +1,5 @@
 
-port_quantity: 9
-ss_password: ""
-encrypt_method: "bf-cfb"
-timeout: 300
+#port_nums:
+#ss_password:
+#encrypt_method:
+#timeout:

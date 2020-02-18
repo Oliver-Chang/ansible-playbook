@@ -21,18 +21,20 @@
   copy:
     src: /root/go/bin/shadowsocks-server
     dest: /usr/local/bin/shadowsocks-server
+    mode: 755
     remote_src: yes
 
-# - name: "Create shadowsocks-go-server config file"
-#   template:
-#     dest: "/etc/shadowsocks/server.json.test"
-#     src: server_conf.j2
+- name: "Create shadowsocks-go-server config file"
+  template:
+    dest: "/etc/shadowsocks/server.json"
+    src: server_conf.j2
 
 - name: "Enable and start shadowsocks-go-server service"
   systemd:
     name: "shadowsocks-go-server.service"
     enabled: "yes"
     state: "restarted"
+
 
 - name: "Add shadowsocks-go-server firewalld service"
   copy:

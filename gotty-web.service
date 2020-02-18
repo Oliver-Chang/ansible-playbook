@@ -1,0 +1,12 @@
+[Unit]
+Description=gotty web server
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/gotty -w login zqq
+WorkingDirectory=/home/zqq
+Restart=always
+
+
+[Install]
+WantedBy=multi-user.target

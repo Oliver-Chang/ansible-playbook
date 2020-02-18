@@ -3,11 +3,11 @@
   hosts: server
   remote_user: "root"
   roles:
-    #- role: oefenweb.swapfile
-    #  swapfile_size: 8GB
-    #- base
-    #- golang
-    #- timezone
-    #- chrony
-    #- sshd
+    # - role: oefenweb.swapfile
+    #   swapfile_size: 8GB
+    # - base
+    # - golang
+    # - timezone
+    # - chrony
+    # - sshd
     - frp-server

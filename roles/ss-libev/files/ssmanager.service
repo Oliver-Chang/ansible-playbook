@@ -1,0 +1,12 @@
+[Unit]
+Description=Shadowsocks Manager Server
+
+[Service]
+User=root
+Group=root
+Type=simple
+ExecStart=/usr/bin/ss-manager --manager-address /var/run/shadowsocks-manager.sock -c /etc/shadowsocks-libev/vultr.json start
+ExecStop=/usr/bin/ss-manager --manager-address /var/run/shadowsocks-manager.sock -c /etc/shadowsocks-libev/vultr.json stop
+
+[Install]
+WantedBy=multi-user.target

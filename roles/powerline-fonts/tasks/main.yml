@@ -1,9 +1,0 @@
-- name: "Will clone powerline fonts repo"
-  async: 600
-  poll: 10
-  git:
-    repo: "{{ powerline_fonts_repo }}"
-    dest: "{{ clone_dest }}"
-
-- name: "Will install powerline fonts"
-  shell: "{{ clone_dest }}/install.sh"

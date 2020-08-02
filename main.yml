@@ -3,17 +3,18 @@
   hosts: desktop
   remote_user: "oliver"
   roles:
-    - base
-    - pip
-    - gitconfig
-    - golang
-    - sshd
-    - timezone
-    - chrony
-    - fcitx
-    - profile
-    - i3wm-desktop
-    - alacritty
+    # - base
+    # - pip
+    # - gitconfig
+    # - golang
+    # - sshd
+    # - timezone
+    # - chrony
+    # - fcitx
+    # - nodejs
+    # - profile
+    # - i3wm-desktop
+    # - alacritty
     - meow
-    - powerline-fonts
+    #- powerline-fonts
     #- spacevim

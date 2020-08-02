@@ -1,0 +1,16 @@
+{
+    "server": ["::1", "0.0.0.0"],
+    "mode": "tcp_and_udp",
+    "port_password": {
+    {% for port in range(10000, 10000 + PortMaxNum) %}
+    "{{ port }}": "{{ SSPassword }}",
+    {% endfor %}
+
+    {% for port in range(20000, 20000 + PortMaxNum) %}
+    "{{ port }}": "{{ SSPassword }}",
+    {% endfor %}
+    "9999": "{{ SSPassword }}"
+	},
+    "timeout": 300,
+    "method": "chacha20-ietf-poly1305"
+}

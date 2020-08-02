@@ -1,7 +1,6 @@
 - name: "Will install meow"
   become: yes
   shell: "go get github.com/netheril96/MEOW"
-
 - name: "Will copy meow.service to remote"
   become: yes
   copy:

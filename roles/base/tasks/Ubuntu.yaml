@@ -1,12 +1,12 @@
-- name: Include OS-specific variables.
-  include_vars: '{{ ansible_distribution }}.yaml'
+#- name: Include OS-specific variables.
+#  include_vars: '{{ ansible_distribution }}.yaml'
 
-  #- name: "Update all packages to the latest version"
-  #  apt:
-  #    upgrade: dist
-  #    update_cache: yes
-    
-    
+#- name: "Update all packages to the latest version"
+#  apt:
+#    upgrade: dist
+#    update_cache: yes
+
+
 # - name: "Install Ubuntu package {{ packages }}"
 #   apt:
 #     name: "{{ packages }}"

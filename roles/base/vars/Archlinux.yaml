@@ -1,17 +1,17 @@
 packages:
   - base-devel
   - yay
-  - zsh
   - git
   - vim
   - neovim
-  - termite
   - make
   - cmake
   - clang
   - lldb
   - python-pip
   - albert
+  - yarn
+  - telegram-desktop
     #  - nodejs
 # - docker
 # c&cpp

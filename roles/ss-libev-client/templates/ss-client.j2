@@ -1,0 +1,9 @@
+{
+    "server": ["::1", "{{ ServerHost }}"],
+    "mode":"tcp_and_udp",
+    "server_port": {{ ServerPort }},
+    "local_port":1080,
+    "password":"{{ SSPassword }}",
+    "timeout":60,
+    "method":"chacha20-ietf-poly1305"
+}

@@ -1,0 +1,25 @@
+- name: Install ss-libev
+  become: yes
+  package:
+    name: shadowsocks-libev
+    state: latest
+
+
+- name: Create shadowsock cleint vultr config file
+  become: yes
+  template:
+    src: ss-server.j2
+    dest: /etc/shadowsocks-libev/vultr.json
+
+- name: "Add shadowsocks-go-server service"
+  become: yes
+  copy:
+    src:  ssmanager.service
+    dest: /etc/systemd/system/ssmanager.service
+
+- name: Enable and start ss-libev service
+  become: yes
+  systemd:
+    name: ssmanager.service
+    enabled: yes
+    state: restarted

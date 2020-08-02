@@ -3,11 +3,19 @@
   hosts: vultr
   remote_user: "root"
   roles:
-    #    - role: oefenweb.swapfile
-    #      swapfile_size: 4GB
-    - base
-    - golang
-    - timezone
-    - chrony
-    - sshd
-    - role: ss-go-server
+    - role: ss-libev
+      PortMaxNum: 20
+      SSPassword: linux10000
+    
+    # - role: geerlingguy.swap
+    #   swap_file_size_mb: '4096'
+    # - base
+      #    - golang
+    # - timezone
+    # - chrony
+    # - sshd
+    #    - role: ss-go-server
+      #      port_nums: 20
+      #      ss_password: linux10000
+      #      encrypt_method: aes-256-cfb
+      #      timeout: 600

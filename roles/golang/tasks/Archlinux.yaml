@@ -1,5 +1,0 @@
-#- name: "Install package {{ golang_package }}."
-#  pacman:
-#    name: 
-#    update_cache: yes
-#
